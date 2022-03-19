@@ -1,4 +1,4 @@
-import React from "react";
+import CartWidget from './CartWidget/CartWidget'
 
 function NavBar(){
 
@@ -23,6 +23,7 @@ function NavBar(){
             </div>
             <input type="text" placeholder="Search.." className="search-bar"/>
         </nav> 
+        <CartWidget count={0}/>
     </header>
     )    
 }
