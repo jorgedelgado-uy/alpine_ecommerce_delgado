@@ -1,0 +1,11 @@
+.item-list-container{
+    display: block;
+    position: fixed;
+    margin-top: 70px;
+    margin-left: 10px;
+    padding: 0 10px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px gray;
+    width: 97%;
+}
