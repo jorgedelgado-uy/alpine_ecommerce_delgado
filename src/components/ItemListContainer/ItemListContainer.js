@@ -1,3 +1,4 @@
+import ItemCounter from '../ItemCounter/ItemCounter'
 import './ItemListContainer.css'
 
 const ItemListContainer = (props) => {
@@ -5,7 +6,7 @@ const ItemListContainer = (props) => {
         <div className='item-list-container'>
             <h2>{props.tittle}</h2>
             <div className='item-list-selection'>
-                <p>Items go here</p>
+                <ItemCounter stock={5} initial={1}/>
             </div>
         </div>
     )
