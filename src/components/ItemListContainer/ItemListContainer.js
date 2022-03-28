@@ -6,7 +6,7 @@ const ItemListContainer = (props) => {
         <div className='item-list-container'>
             <h2>{props.tittle}</h2>
             <div className='item-list-selection'>
-                <ItemCounter stock={5} initial={1}/>
+                <ItemCounter stock={5} initial={1} onAdd={(count) => console.log(count)}/>
             </div>
         </div>
     )
