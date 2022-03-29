@@ -1,6 +1,8 @@
+
 .item-count-container{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .item-count-button{

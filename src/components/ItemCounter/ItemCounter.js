@@ -5,7 +5,10 @@ export default function ItemCounter(props){
 
     const [ count, setCount ] = useState(props.initial);
     const stock = props.stock;
-    const onAdd = props.onAdd;
+
+    const onAdd = ()=>{
+        console.log(count);
+    }
 
     const addItem = ()=>{
         if (count < stock)
@@ -18,33 +21,35 @@ export default function ItemCounter(props){
     }
 
     return (
-        <div className='item-count-container'>
-        {
-            onAdd(count)
-        }
+        <>        
         {
             stock < 1
             ?
             WithoutStock()
             :
-            WithStock(addItem, decreseItem, count)
-        }
-        </div>
+            WithStock(addItem, decreseItem, count, onAdd)
+        }       
+        </>
     )
 }
 
 const WithoutStock = () =>{
     return(
-        <h2>No stock available</h2>
+        <div className='item-count-container'>
+            <h2>No stock available</h2>
+        </div>
     );
 }
 
-const WithStock = (add, decrease, count) =>{
+const WithStock = (add, decrease, count, onAdd) =>{
     return(
         <>
-            <button onClick={decrease} className='item-count'>-</button>
-            <p>{count}</p>
-            <button onClick={add} className='item-count'>+</button>
+            <div className='item-count-container'>
+                <button onClick={decrease} className='item-count'>-</button>
+                <p>{count}</p>
+                <button onClick={add} className='item-count'>+</button>
+            </div>
+            <button onClick={onAdd}>Add To Cart</button>
         </>      
     );
 }

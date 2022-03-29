@@ -1,0 +1,20 @@
+.item-card {
+    width: 200px;
+    height: 400px;
+    text-align: center;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.item-picture-container{
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+}
+
+.item-title{
+    font-size: 20px;
+    font-weight: bold;
+}

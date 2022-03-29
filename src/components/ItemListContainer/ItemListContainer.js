@@ -1,16 +1,14 @@
-import ItemCounter from '../ItemCounter/ItemCounter'
+import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 
-const ItemListContainer = (props) => {
+export default function ItemListContainer(props) {
     return(
         <div className='item-list-container'>
             <h2>{props.tittle}</h2>
             <div className='item-list-selection'>
-                <ItemCounter stock={5} initial={1} onAdd={(count) => console.log(count)}/>
+                <ItemList/>
             </div>
         </div>
     )
     
 }
-
-export default ItemListContainer;
